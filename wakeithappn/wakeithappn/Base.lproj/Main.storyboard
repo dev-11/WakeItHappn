@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HSM-lO-Hdx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Alarm-->
+        <scene sceneID="tFt-se-mJ2">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="gUn-Wv-9lC" customClass="LiveAlarmViewController" customModule="wakeithappn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hXF-Mo-tdN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="aGn-nx-2qn"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Alarm" id="6dN-1v-BYp"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31w-Q1-eaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-200" y="26"/>
+        </scene>
+        <!--Setup-->
+        <scene sceneID="oLc-ew-mnA">
+            <objects>
+                <viewController id="klx-F7-OHF" customClass="ConfigurationViewController" customModule="wakeithappn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kfO-JK-AjN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bho-dX-yiJ">
+                                <rect key="frame" x="0.0" y="456" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="GTs-3b-9UQ"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="550078201.53316903">
+                                    <!--2018-06-07 15:30:01 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timeChanged:" destination="klx-F7-OHF" eventType="valueChanged" id="kLx-Z0-tuE"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zu-Bh-GxP">
+                                <rect key="frame" x="34" y="118" width="104" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-30-SLA">
+                                <rect key="frame" x="229" y="121" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeTime:" destination="klx-F7-OHF" eventType="touchUpInside" id="jp3-ya-Num"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQc-BK-gYE">
+                                <rect key="frame" x="135" y="522" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.32481390240000002" green="0.34466239809999999" blue="0.3737815022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SET ALARM">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bho-dX-yiJ" firstAttribute="bottom" secondItem="cU2-Sf-v2s" secondAttribute="bottom" id="779-ci-Kx4"/>
+                            <constraint firstItem="bho-dX-yiJ" firstAttribute="trailing" secondItem="cU2-Sf-v2s" secondAttribute="trailing" id="N8V-I9-Qjp"/>
+                            <constraint firstItem="bho-dX-yiJ" firstAttribute="leading" secondItem="cU2-Sf-v2s" secondAttribute="leading" id="XgY-0X-ST0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cU2-Sf-v2s"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setup" id="YPo-Ib-Uvr"/>
+                    <connections>
+                        <outlet property="arrivalTimeButton" destination="zZg-30-SLA" id="fKU-mD-rao"/>
+                        <outlet property="dateTimePicker" destination="bho-dX-yiJ" id="fIA-pd-5q7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYT-xI-CY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200.80000000000001" y="-639.13043478260875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xKw-Gb-p4F">
+            <objects>
+                <tabBarController id="HSM-lO-Hdx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wvz-TX-eIX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="klx-F7-OHF" kind="relationship" relationship="viewControllers" id="61u-nj-T13"/>
+                        <segue destination="gUn-Wv-9lC" kind="relationship" relationship="viewControllers" id="H5W-xI-R7t"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BvS-mP-Utn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="-306"/>
         </scene>
     </scenes>
 </document>
