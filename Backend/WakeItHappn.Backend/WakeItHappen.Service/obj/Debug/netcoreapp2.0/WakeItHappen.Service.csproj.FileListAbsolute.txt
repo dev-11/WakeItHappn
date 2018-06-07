@@ -1,0 +1,8 @@
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/bin/Debug/netcoreapp2.0/WakeItHappen.Service.deps.json
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/bin/Debug/netcoreapp2.0/WakeItHappen.Service.dll
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/bin/Debug/netcoreapp2.0/WakeItHappen.Service.pdb
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/obj/Debug/netcoreapp2.0/WakeItHappen.Service.csproj.CoreCompileInputs.cache
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/obj/Debug/netcoreapp2.0/WakeItHappen.Service.AssemblyInfoInputs.cache
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/obj/Debug/netcoreapp2.0/WakeItHappen.Service.AssemblyInfo.cs
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/obj/Debug/netcoreapp2.0/WakeItHappen.Service.dll
+/Users/ottogal/Work/Deloitte/Sandbox/MashUpDayJun2018/WakeItHappn/Backend/WakeItHappn.Backend/WakeItHappen.Service/obj/Debug/netcoreapp2.0/WakeItHappen.Service.pdb
