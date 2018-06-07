@@ -1,0 +1,6 @@
+framework module Pods_wakeithappn {
+  umbrella header "Pods-wakeithappn-umbrella.h"
+
+  export *
+  module * { export * }
+}
