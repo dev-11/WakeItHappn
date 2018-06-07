@@ -6,8 +6,13 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="WakeItHappen.Service" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Constants" t="Include">
+          <e p="Poi.cs" t="Include" />
+          <e p="TravelType.cs" t="Include" />
+        </e>
         <e p="Coordinate.cs" t="Include" />
         <e p="IRoutePlanner.cs" t="Include" />
+        <e p="Mocks.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -17,10 +22,30 @@
         </e>
         <e p="TravelDetails.cs" t="Include" />
         <e p="TravelRouteResponse.cs" t="Include" />
+        <e p="TravelStatus.cs" t="Include" />
         <e p="TravelTimeRequest.cs" t="Include" />
         <e p="WakeItHappen.Service.csproj" t="IncludeRecursive" />
       </e>
       <e p="WakeItHappn.Backend.sln" t="IncludeFlat" />
+      <e p="WakeIthappn.WebApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="WakeIthappn.WebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="WakeIthappn.WebApi.csproj" t="IncludeRecursive" />
+        <e p="wwwroot" t="Include" />
+      </e>
     </e>
   </component>
 </project>
