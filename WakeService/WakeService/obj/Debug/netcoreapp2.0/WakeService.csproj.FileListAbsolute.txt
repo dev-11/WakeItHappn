@@ -1,0 +1,10 @@
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/bin/Debug/netcoreapp2.0/WakeService.deps.json
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/bin/Debug/netcoreapp2.0/WakeService.runtimeconfig.json
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/bin/Debug/netcoreapp2.0/WakeService.runtimeconfig.dev.json
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/bin/Debug/netcoreapp2.0/WakeService.dll
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/bin/Debug/netcoreapp2.0/WakeService.pdb
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/obj/Debug/netcoreapp2.0/WakeService.csproj.CoreCompileInputs.cache
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/obj/Debug/netcoreapp2.0/WakeService.AssemblyInfoInputs.cache
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/obj/Debug/netcoreapp2.0/WakeService.AssemblyInfo.cs
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/obj/Debug/netcoreapp2.0/WakeService.dll
+/Users/arunramamurthy/Projects/Mashup/WakeItHappn/WakeService/WakeService/obj/Debug/netcoreapp2.0/WakeService.pdb

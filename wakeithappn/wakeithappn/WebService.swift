@@ -13,7 +13,7 @@ private let _webServiceSharedInstance = WebService()
 
 class WebService {
     
-    let apiUrl = "http://localhost:5000/api"
+    let apiUrl = "http://localhost:5000/api/alarm"
     
     class var sharedInstance: WebService {
         return _webServiceSharedInstance
@@ -22,7 +22,7 @@ class WebService {
     init() {
     }
     
-    func getAlarmTime(alarm: Alarm) -> Void {
+    func getAlarmTime() -> Void {
         
         // var params = ["alarmKey": "x"]
         
