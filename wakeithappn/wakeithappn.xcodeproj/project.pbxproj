@@ -15,7 +15,14 @@
 		FF88BFC220C97691005E783D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF88BFC020C97691005E783D /* LaunchScreen.storyboard */; };
 		FF88BFCA20C97D8E005E783D /* LiveAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFC920C97D8E005E783D /* LiveAlarmViewController.swift */; };
 		FF88BFCC20C987B5005E783D /* AlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFCB20C987B5005E783D /* AlarmService.swift */; };
-		FF88BFCE20C987CB005E783D /* WebApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFCD20C987CB005E783D /* WebApiService.swift */; };
+		FF88BFD020C9B87E005E783D /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFCF20C9B87E005E783D /* SearchLocationViewController.swift */; };
+		FF88BFD220C9B911005E783D /* SearchAddressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFD120C9B911005E783D /* SearchAddressItem.swift */; };
+		FF88BFD420C9B96B005E783D /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFD320C9B96B005E783D /* ViewControllerExtension.swift */; };
+		FF88BFD620C9B9D7005E783D /* MapsPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFD520C9B9D7005E783D /* MapsPlacesService.swift */; };
+		FF88BFD820C9BAF3005E783D /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFD720C9BAF3005E783D /* SearchViewCell.swift */; };
+		FFDC2AC520CA70CE00D5E5E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2AC420CA70CE00D5E5E7 /* Location.swift */; };
+		FFDC2AC720CA808400D5E5E7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2AC620CA808400D5E5E7 /* WebService.swift */; };
+		FFDC2AC920CA812200D5E5E7 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2AC820CA812200D5E5E7 /* Alarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +38,14 @@
 		FF88BFC320C97691005E783D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF88BFC920C97D8E005E783D /* LiveAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAlarmViewController.swift; sourceTree = "<group>"; };
 		FF88BFCB20C987B5005E783D /* AlarmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmService.swift; sourceTree = "<group>"; };
-		FF88BFCD20C987CB005E783D /* WebApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiService.swift; sourceTree = "<group>"; };
+		FF88BFCF20C9B87E005E783D /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		FF88BFD120C9B911005E783D /* SearchAddressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressItem.swift; sourceTree = "<group>"; };
+		FF88BFD320C9B96B005E783D /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		FF88BFD520C9B9D7005E783D /* MapsPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsPlacesService.swift; sourceTree = "<group>"; };
+		FF88BFD720C9BAF3005E783D /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		FFDC2AC420CA70CE00D5E5E7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FFDC2AC620CA808400D5E5E7 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FFDC2AC820CA812200D5E5E7 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +106,14 @@
 				FF88BFC320C97691005E783D /* Info.plist */,
 				FF88BFC920C97D8E005E783D /* LiveAlarmViewController.swift */,
 				FF88BFCB20C987B5005E783D /* AlarmService.swift */,
-				FF88BFCD20C987CB005E783D /* WebApiService.swift */,
+				FF88BFCF20C9B87E005E783D /* SearchLocationViewController.swift */,
+				FF88BFD120C9B911005E783D /* SearchAddressItem.swift */,
+				FF88BFD320C9B96B005E783D /* ViewControllerExtension.swift */,
+				FF88BFD520C9B9D7005E783D /* MapsPlacesService.swift */,
+				FF88BFD720C9BAF3005E783D /* SearchViewCell.swift */,
+				FFDC2AC420CA70CE00D5E5E7 /* Location.swift */,
+				FFDC2AC620CA808400D5E5E7 /* WebService.swift */,
+				FFDC2AC820CA812200D5E5E7 /* Alarm.swift */,
 			);
 			path = wakeithappn;
 			sourceTree = "<group>";
@@ -238,10 +259,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF88BFCE20C987CB005E783D /* WebApiService.swift in Sources */,
+				FF88BFD620C9B9D7005E783D /* MapsPlacesService.swift in Sources */,
+				FFDC2AC520CA70CE00D5E5E7 /* Location.swift in Sources */,
 				FF88BFBA20C97691005E783D /* ConfigurationViewController.swift in Sources */,
 				FF88BFCA20C97D8E005E783D /* LiveAlarmViewController.swift in Sources */,
+				FF88BFD020C9B87E005E783D /* SearchLocationViewController.swift in Sources */,
+				FFDC2AC720CA808400D5E5E7 /* WebService.swift in Sources */,
+				FF88BFD420C9B96B005E783D /* ViewControllerExtension.swift in Sources */,
+				FFDC2AC920CA812200D5E5E7 /* Alarm.swift in Sources */,
+				FF88BFD820C9BAF3005E783D /* SearchViewCell.swift in Sources */,
 				FF88BFB820C97691005E783D /* AppDelegate.swift in Sources */,
+				FF88BFD220C9B911005E783D /* SearchAddressItem.swift in Sources */,
 				FF88BFCC20C987B5005E783D /* AlarmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

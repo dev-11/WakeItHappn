@@ -10,6 +10,11 @@ import UIKit
 
 class ConfigurationViewController: UIViewController {
 
+    // Outlets
+    @IBOutlet weak var arrivalTimeButton: UIButton!
+    @IBOutlet weak var dateTimePicker: UIDatePicker!
+    @IBOutlet weak var startLocationButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,6 +22,11 @@ class ConfigurationViewController: UIViewController {
         dateTimePicker.isHidden = true
         
         arrivalTimeButton.setTitle("09:00", for: .normal)
+        if (self.startingLocation.name == "") {
+            startLocationButton.setTitle("Select", for: .normal)
+        } else {
+            startLocationButton.setTitle(startingLocation.name, for: .normal)
+        }
         
         let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
         view.addGestureRecognizer(gestureRecognizer)
@@ -35,10 +45,10 @@ class ConfigurationViewController: UIViewController {
     
     // Alarm setup info
     var arrivalTime: Date = Date()
+    var startingLocation: Location = Location(placeId: "", name: "", formattedAddress: "", coordinates: nil)
+    var finishingLocation: Location = Location(placeId: "", name: "", formattedAddress: "", coordinates: nil)
 
-    // Outlets
-    @IBOutlet weak var arrivalTimeButton: UIButton!
-    @IBOutlet weak var dateTimePicker: UIDatePicker!
+    
     
     // Actions
     
@@ -55,5 +65,10 @@ class ConfigurationViewController: UIViewController {
         let arrivalTimeToDisplay = "\(hours):\(minutes)"
         arrivalTimeButton.setTitle(arrivalTimeToDisplay, for: .normal)
     }
+    
+    @IBAction func setAlarm(_ sender: Any) {
+        AlarmService.sharedInstance.setAlarm(date: arrivalTime)
+    }
+    
 }
 
