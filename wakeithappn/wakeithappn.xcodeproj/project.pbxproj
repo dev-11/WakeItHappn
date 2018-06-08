@@ -23,6 +23,7 @@
 		FFDC2AC520CA70CE00D5E5E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2AC420CA70CE00D5E5E7 /* Location.swift */; };
 		FFDC2AC720CA808400D5E5E7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2AC620CA808400D5E5E7 /* WebService.swift */; };
 		FFDC2AC920CA812200D5E5E7 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2AC820CA812200D5E5E7 /* Alarm.swift */; };
+		FFDC2ACD20CAAC6700D5E5E7 /* ShowAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC2ACC20CAAC6700D5E5E7 /* ShowAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FFDC2AC420CA70CE00D5E5E7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FFDC2AC620CA808400D5E5E7 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		FFDC2AC820CA812200D5E5E7 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		FFDC2ACC20CAAC6700D5E5E7 /* ShowAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		FF88BFB620C97691005E783D /* wakeithappn */ = {
 			isa = PBXGroup;
 			children = (
+				FFDC2ACC20CAAC6700D5E5E7 /* ShowAlarmViewController.swift */,
 				FF88BFB720C97691005E783D /* AppDelegate.swift */,
 				FF88BFB920C97691005E783D /* ConfigurationViewController.swift */,
 				FF88BFBB20C97691005E783D /* Main.storyboard */,
@@ -269,6 +272,7 @@
 				FFDC2AC920CA812200D5E5E7 /* Alarm.swift in Sources */,
 				FF88BFD820C9BAF3005E783D /* SearchViewCell.swift in Sources */,
 				FF88BFB820C97691005E783D /* AppDelegate.swift in Sources */,
+				FFDC2ACD20CAAC6700D5E5E7 /* ShowAlarmViewController.swift in Sources */,
 				FF88BFD220C9B911005E783D /* SearchAddressItem.swift in Sources */,
 				FF88BFCC20C987B5005E783D /* AlarmService.swift in Sources */,
 			);

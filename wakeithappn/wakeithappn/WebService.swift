@@ -22,7 +22,7 @@ class WebService {
     init() {
     }
     
-    func getAlarmTime(arrivalTime: Date, from: (Double, Double), to: (Double, Double)) -> Void {
+    func getAlarmTime(arrivalTime: Date, from: (Double, Double), to: (Double, Double), completion: @escaping  (Date, Error?) -> Void) -> Void {
         
         var params = ["alarmId": "702e5dd5-5395-484f-acb1-0b2436c8f8a4"]
         let formatter = DateFormatter()
@@ -40,6 +40,7 @@ class WebService {
         Alamofire.request(apiUrl, parameters: params).responseJSON {
             response in
             print("response")
+            completion(Date(), nil)
         }
     }
 }

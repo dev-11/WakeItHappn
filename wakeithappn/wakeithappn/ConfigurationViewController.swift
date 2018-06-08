@@ -63,11 +63,16 @@ class ConfigurationViewController: UIViewController {
     var finishingLocation: Location = Location(placeId: "", name: "", formattedAddress: "", coordinates: nil)
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var dest = segue.destination as! SearchAddNewViewController
+        
         if (segue.identifier == "selectStart") {
+            var dest = segue.destination as! SearchAddNewViewController
             dest.startLocation = true
         } else if (segue.identifier == "selectEnd") {
+            var dest = segue.destination as! SearchAddNewViewController
             dest.startLocation = false
+        } else if (segue.identifier == "showAlarm") {
+            var dest = segue.destination as! ShowAlarmViewController
+            dest.alarmDate = self.finalAlarmDate
         }
     }
     
@@ -103,9 +108,18 @@ class ConfigurationViewController: UIViewController {
         }
     }
     
+    var finalAlarmDate = Date()
+    
     @IBAction func setAlarm(_ sender: Any) {
         
-        WebService.sharedInstance.getAlarmTime(arrivalTime: self.arrivalTime, from: self.startingLocation.coordinates!, to: self.finishingLocation.coordinates!)
+        WebService.sharedInstance.getAlarmTime(arrivalTime: self.arrivalTime, from: self.startingLocation.coordinates!, to: self.finishingLocation.coordinates!, completion: {(result, error) -> Void in
+//            if let results = result {
+                self.performSegue(withIdentifier: "showAlarm", sender: nil)
+//            } else {
+                print(error)
+                // Add Alert Service here
+//            }
+        })
         // AlarmService.sharedInstance.setAlarm(date: arrivalTime)
     }
     

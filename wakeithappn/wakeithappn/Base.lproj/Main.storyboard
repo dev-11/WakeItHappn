@@ -228,11 +228,74 @@
                         <outlet property="getReadyTimeButton" destination="P7u-Xh-7cq" id="LgJ-8y-saf"/>
                         <outlet property="setAlarmButton" destination="TQc-BK-gYE" id="ElM-hs-FeB"/>
                         <outlet property="startLocationButton" destination="IbB-nn-jOC" id="rGh-hl-0Ca"/>
+                        <segue destination="ijj-PO-akg" kind="show" identifier="showAlarm" id="gjM-nh-4I4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYT-xI-CY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="-640"/>
+        </scene>
+        <!--Show Alarm View Controller-->
+        <scene sceneID="11P-A5-YTz">
+            <objects>
+                <viewController id="ijj-PO-akg" customClass="ShowAlarmViewController" customModule="wakeithappn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Poa-PT-yYV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-fg-vL4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Live Wake Up Time" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6o7-UU-tj1">
+                                <rect key="frame" x="72.5" y="154" width="230" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="H0H-QS-zkj"/>
+                                    <constraint firstAttribute="width" constant="230" id="c9W-ZF-7cY"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5V-hC-SbL">
+                                <rect key="frame" x="87.5" y="414" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8Ua-su-EdE"/>
+                                    <constraint firstAttribute="height" constant="50" id="jkS-eK-dpd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="60y-vC-Cfo">
+                                <rect key="frame" x="157" y="544" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="em8-NE-tmQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="inl-gR-dEt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T5V-hC-SbL" firstAttribute="centerX" secondItem="Poa-PT-yYV" secondAttribute="centerX" id="2Qi-gH-4Vx"/>
+                            <constraint firstItem="rNg-fg-vL4" firstAttribute="top" secondItem="Ua8-uA-ewI" secondAttribute="top" id="AWP-1V-oEW"/>
+                            <constraint firstItem="6o7-UU-tj1" firstAttribute="centerX" secondItem="Poa-PT-yYV" secondAttribute="centerX" id="BNf-pE-yho"/>
+                            <constraint firstItem="Ua8-uA-ewI" firstAttribute="bottom" secondItem="rNg-fg-vL4" secondAttribute="bottom" id="Bqh-ls-9N2"/>
+                            <constraint firstItem="T5V-hC-SbL" firstAttribute="top" secondItem="6o7-UU-tj1" secondAttribute="bottom" constant="208" id="DE8-Nw-j9u"/>
+                            <constraint firstItem="60y-vC-Cfo" firstAttribute="centerX" secondItem="Poa-PT-yYV" secondAttribute="centerX" id="NMU-d8-TG7"/>
+                            <constraint firstItem="Ua8-uA-ewI" firstAttribute="trailing" secondItem="rNg-fg-vL4" secondAttribute="trailing" id="TgH-8Q-uWF"/>
+                            <constraint firstItem="6o7-UU-tj1" firstAttribute="top" secondItem="Ua8-uA-ewI" secondAttribute="top" constant="90" id="UyM-hm-Plr"/>
+                            <constraint firstItem="60y-vC-Cfo" firstAttribute="top" secondItem="T5V-hC-SbL" secondAttribute="bottom" constant="80" id="eLb-96-seg"/>
+                            <constraint firstItem="rNg-fg-vL4" firstAttribute="leading" secondItem="Ua8-uA-ewI" secondAttribute="leading" id="ea2-gx-DS5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ua8-uA-ewI"/>
+                    </view>
+                    <connections>
+                        <outlet property="showAlarmLabel" destination="T5V-hC-SbL" id="Rlf-Wd-Rw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ew-2n-rKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="216"/>
         </scene>
         <!--Search Add New View Controller-->
         <scene sceneID="uHx-Jb-xjC">
@@ -353,6 +416,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock" width="48" height="48"/>
+        <image name="morning" width="150" height="225"/>
         <image name="night_sky" width="300" height="450"/>
         <image name="search_grey" width="24" height="24"/>
     </resources>
