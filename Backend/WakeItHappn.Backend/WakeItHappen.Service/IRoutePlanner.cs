@@ -2,12 +2,18 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace WakeItHappen.Service
 {
     public interface IRoutePlanner
     {
         TravelRouteResponse GetTravelTime(TravelTimeRequest request);
+    }
+
+    public class TravelTime
+    {
+        public int travel_time_minutes { get; set; }
     }
 
     public class CityMapperClient : IRoutePlanner
@@ -37,14 +43,11 @@ namespace WakeItHappen.Service
                 var byteArrayMessage = response.Content.ReadAsByteArrayAsync();
                 var stringMessage = Encoding.ASCII.GetString(byteArrayMessage.Result);
                 
-                dynamic jsonMessage = Newtonsoft.Json.JsonConvert.DeserializeObject(stringMessage);
+                var jsonMessage = Newtonsoft.Json.JsonConvert.DeserializeObject(stringMessage, typeof(TravelTime));
                 
-                string travel_time_minutes = jsonMessage.travel_time_minutes;
-
-
                 return new TravelRouteResponse
                 {
-                    TravelTimeMinutes = int.Parse(travel_time_minutes),
+                    TravelTimeMinutes = (jsonMessage as TravelTime).travel_time_minutes,
                     TravelStatus = TravelStatus.Unknown,
                     Details = new TravelDetails()
                 };
