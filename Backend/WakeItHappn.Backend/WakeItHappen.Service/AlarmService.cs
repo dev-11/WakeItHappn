@@ -4,7 +4,7 @@ namespace WakeItHappen.Service
 {
     public class AlarmService : IAlarm
     {
-        private const int minutesToGetReady = 60;
+        private const int minutesToGetReady = 45;
         
         private readonly IRoutePlanner _routePlanner;
         
