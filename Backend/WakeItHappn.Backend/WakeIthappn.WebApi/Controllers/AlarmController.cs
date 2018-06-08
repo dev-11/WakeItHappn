@@ -13,15 +13,21 @@ namespace WakeIthappn.WebApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public JsonResult Get(/*[FromBody] AlarmData alarmData*/)
+        public JsonResult Get([FromBody]AlarmData alarmData)
         {
-            AlarmData alarmData;
             IAlarm alarmService;
+
+            bool useRealData = true;
             
             // use this to change between mocked and live data
-            if (true)
+            if (useRealData)
             {
                 alarmService = new AlarmService(new CityMapperClient());
+  
+            }
+            else
+            {
+                alarmService = Mocks.For.AlarmSerice;
                 alarmData = new AlarmData
                 {
                     AlarmId = Guid.NewGuid(),
@@ -37,10 +43,6 @@ namespace WakeIthappn.WebApi.Controllers
                         Longitude = 0.074503
                     }
                 };
-            }
-            else
-            {
-                alarmService = Mocks.For.AlarmSerice;
             }
 
 
