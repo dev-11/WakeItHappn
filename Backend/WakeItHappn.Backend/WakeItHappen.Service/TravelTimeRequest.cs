@@ -6,7 +6,6 @@ namespace WakeItHappen.Service
     {
         public Coordinate Start { get; set; }
         public Coordinate End { get; set; }
-        public string UserKey { get; set; }
-        private DateTime Time { get; set; }
+        public DateTime Time { get; set; }
     }
 }
