@@ -4,7 +4,6 @@ namespace WakeItHappen.Service
 {
     public class AlarmService : IAlarm
     {
-        private const int minutesToGetReady = 45;
         
         private readonly IRoutePlanner _routePlanner;
         
@@ -31,11 +30,13 @@ namespace WakeItHappen.Service
                 Time = alarmData.ArrivalTime
             });
 
-            return new AlarmRequest
+            var retdata =  new AlarmRequest
             {
                 AlarmId = Guid.NewGuid(),
-                AlarmTime = alarmData.ArrivalTime.AddMinutes(-response.TravelTimeMinutes-minutesToGetReady)
+                AlarmTime = alarmData.ArrivalTime.AddMinutes(-response.TravelTimeMinutes).AddMinutes(-alarmData.MinutesToGetReady)
             };
+
+            return retdata;
         }
     }
 }

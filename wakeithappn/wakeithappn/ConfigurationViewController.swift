@@ -105,7 +105,7 @@ class ConfigurationViewController: UIViewController {
     
     @IBAction func setAlarm(_ sender: Any) {
         
-        WebService.sharedInstance.getAlarmTime(arrivalTime: self.arrivalTime, from: self.startingLocation.coordinates!, to: self.finishingLocation.coordinates!)
+        WebService.sharedInstance.getAlarmTime(arrivalTime: self.arrivalTime, from: self.startingLocation.coordinates!, to: self.finishingLocation.coordinates!, getReadyTime: self.getReadyTime )
         // AlarmService.sharedInstance.setAlarm(date: arrivalTime)
     }
     

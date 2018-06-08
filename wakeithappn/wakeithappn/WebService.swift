@@ -22,7 +22,7 @@ class WebService {
     init() {
     }
     
-    func getAlarmTime(arrivalTime: Date, from: (Double, Double), to: (Double, Double)) -> Void {
+    func getAlarmTime(arrivalTime: Date, from: (Double, Double), to: (Double, Double), getReadyTime: Date) -> Void {
         
         var params = ["alarmId": "702e5dd5-5395-484f-acb1-0b2436c8f8a4"]
         let formatter = DateFormatter()
@@ -36,6 +36,11 @@ class WebService {
         params["toLat"] = String(to.0)
         params["toLong"] = String(to.1)
         
+        let calendar = NSCalendar.current
+        let hour = calendar.component(.hour, from: getReadyTime)
+        let minutes = calendar.component(.minute, from: getReadyTime)
+        let minutesToGetReady = (hour * 60) + minutes
+        params["minutesToGetReady"] = String(minutesToGetReady)
         
         Alamofire.request(apiUrl, parameters: params).responseJSON {
             response in

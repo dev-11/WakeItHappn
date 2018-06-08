@@ -10,6 +10,7 @@ namespace WakeItHappen.Service
         public Double FromLong { get; set; }
         public Double ToLat { get; set; }
         public Double ToLong { get; set; }
+        public double MinutesToGetReady { get; set; }
 //        public Coordinate From { get; set; }
 //        public Coordinate To { get; set; }
     }
