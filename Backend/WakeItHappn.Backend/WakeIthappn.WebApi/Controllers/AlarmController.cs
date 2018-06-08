@@ -16,22 +16,24 @@ namespace WakeIthappn.WebApi.Controllers
         public JsonResult Get()
         {
 //            var service = Mocks.For.RoutPlanner.RoutePlanner;
-            var alarmService = Mocks.For.AlarmSerice;
+//            var alarmService = Mocks.For.AlarmSerice;
+
+            var alarmService = new AlarmService(new CityMapperClient());
 
 //            var response = service.GetTravelTime(new TravelTimeRequest());
             var alarmRequest = alarmService.CreateAlarm(new AlarmData
             {
                 AlarmId = Guid.NewGuid(),
-                ArrivalTime = new DateTime(),
+                ArrivalTime = new DateTime(2018,6,8,9,30,0),
                 From = new Coordinate
                 {
-                    Latitude = 1,
-                    Longitude = 2,
+                    Latitude = 51.525246,
+                    Longitude = 0.084672,
                 },
                 To = new Coordinate
                 {
-                    Latitude = 3,
-                    Longitude = 4
+                    Latitude = 51.559098,
+                    Longitude = 0.074503
                 }
             });
             
