@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
 
 private let _webServiceSharedInstance = WebService()
 
@@ -26,9 +26,9 @@ class WebService {
         
         // var params = ["alarmKey": "x"]
         
-        Alamofire.request(apiUrl).responseJSON {
-            response in
-            print("response")
-        }
+//        Alamofire.request(apiUrl).responseJSON {
+//            response in
+//            print("response")
+//        }
     }
 }
