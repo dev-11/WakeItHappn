@@ -1,6 +1,6 @@
 ﻿namespace WakeItHappen.Service.Constants
 {
-    public class Poi
+    public static class Poi
     {
         public const string Home = "Home";
         public const string ChiswickParkStaion = "Chiswick Park Staion";

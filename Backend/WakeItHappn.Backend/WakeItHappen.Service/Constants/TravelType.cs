@@ -1,6 +1,6 @@
 ﻿namespace WakeItHappen.Service.Constants
 {
-    public class TravelType
+    public static class TravelType
     {
         public const string Walk = "Walk";
         public const string DistrictLine = "District line";
