@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 import GooglePlaces
 
-class SearchAddNewViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class SearchAddNewViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UINavigationControllerDelegate {
     
     var searchItems: [SearchAddressItem] = []
+    var startLocation = true
     
     let locationManager = CLLocationManager()
     var location: Location = Location(placeId: "", name: "", formattedAddress: "", coordinates: nil)
@@ -45,6 +46,20 @@ class SearchAddNewViewController: UIViewController, UITextFieldDelegate, UITable
             locationManager.startUpdatingLocation()
         }
         
+        navigationController?.delegate = self
+        
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let viewController = viewController as? ConfigurationViewController {
+            if (startLocation) {
+                viewController.startingLocation = self.location
+                viewController.startLocationButton.setTitle(self.location.name, for: .normal)
+            } else {
+                viewController.finishingLocation = self.location
+                viewController.endLocationButton.setTitle(self.location.name, for: .normal)
+            }
+        }
     }
     
     // MARK: TextView Delegate Methods
@@ -105,7 +120,8 @@ class SearchAddNewViewController: UIViewController, UITextFieldDelegate, UITable
         MapsPlacesService.getPlaceWithId(placeId: self.searchItems[indexPath.row].itemID, completion: {(results, error) -> Void in
 //            if let result = results {
             self.location = results
-            self.performSegue(withIdentifier: "selectedAddress", sender: self)
+            self.navigationController?.popViewController(animated: true)
+            // self.performSegue(withIdentifier: "selectedAddress", sender: self)
 //            } else {
 //                print(error)
 //            }
@@ -114,8 +130,11 @@ class SearchAddNewViewController: UIViewController, UITextFieldDelegate, UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationController = segue.destination as! ConfigurationViewController
-        destinationController.startingLocation = self.location
-        
+        if (startLocation) {
+            destinationController.startingLocation = self.location
+        } else {
+            destinationController.finishingLocation = self.location
+        }
     }
     
 }

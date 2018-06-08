@@ -15,12 +15,9 @@ namespace WakeIthappn.WebApi.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-//            var service = Mocks.For.RoutPlanner.RoutePlanner;
-//            var alarmService = Mocks.For.AlarmSerice;
+            // use this to change between mocked and live data
+            var alarmService = true ? new AlarmService(new CityMapperClient()) : Mocks.For.AlarmSerice;
 
-            var alarmService = new AlarmService(new CityMapperClient());
-
-//            var response = service.GetTravelTime(new TravelTimeRequest());
             var alarmRequest = alarmService.CreateAlarm(new AlarmData
             {
                 AlarmId = Guid.NewGuid(),
@@ -28,7 +25,7 @@ namespace WakeIthappn.WebApi.Controllers
                 From = new Coordinate
                 {
                     Latitude = 51.525246,
-                    Longitude = 0.084672,
+                    Longitude = 0.084672
                 },
                 To = new Coordinate
                 {
@@ -36,8 +33,7 @@ namespace WakeIthappn.WebApi.Controllers
                     Longitude = 0.074503
                 }
             });
-            
-            
+
             return new JsonResult(alarmRequest);
         }
     }
