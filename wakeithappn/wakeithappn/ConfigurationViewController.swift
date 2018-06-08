@@ -67,7 +67,8 @@ class ConfigurationViewController: UIViewController {
     }
     
     @IBAction func setAlarm(_ sender: Any) {
-        AlarmService.sharedInstance.setAlarm(date: arrivalTime)
+        WebService.sharedInstance.getAlarmTime()
+        // AlarmService.sharedInstance.setAlarm(date: arrivalTime)
     }
     
 }

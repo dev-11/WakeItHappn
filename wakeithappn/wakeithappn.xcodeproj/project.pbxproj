@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0C531C854D1BDDF9BCD3326 /* Pods_wakeithappn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F6FC0D64020F1F4975AB9 /* Pods_wakeithappn.framework */; };
+		CFCA3845097FFA596E14167A /* Pods_wakeithappn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E59625F81F5AEEC04A90D0 /* Pods_wakeithappn.framework */; };
 		FF88BFB820C97691005E783D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFB720C97691005E783D /* AppDelegate.swift */; };
 		FF88BFBA20C97691005E783D /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88BFB920C97691005E783D /* ConfigurationViewController.swift */; };
 		FF88BFBD20C97691005E783D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF88BFBB20C97691005E783D /* Main.storyboard */; };
@@ -26,9 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A18A3219612DD9882854785 /* Pods-wakeithappn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeithappn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn.debug.xcconfig"; sourceTree = "<group>"; };
-		532F6FC0D64020F1F4975AB9 /* Pods_wakeithappn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakeithappn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D96C11978F0ED8A45E10C1ED /* Pods-wakeithappn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeithappn.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn.release.xcconfig"; sourceTree = "<group>"; };
+		C0E59625F81F5AEEC04A90D0 /* Pods_wakeithappn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakeithappn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE8A2232C79E272A22A4B80 /* Pods-wakeithappn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeithappn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn.debug.xcconfig"; sourceTree = "<group>"; };
+		F66B0EFA6BBA897135883AB6 /* Pods-wakeithappn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeithappn.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn.release.xcconfig"; sourceTree = "<group>"; };
 		FF88BFB420C97691005E783D /* wakeithappn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wakeithappn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF88BFB720C97691005E783D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF88BFB920C97691005E783D /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -53,26 +53,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0C531C854D1BDDF9BCD3326 /* Pods_wakeithappn.framework in Frameworks */,
+				CFCA3845097FFA596E14167A /* Pods_wakeithappn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		061DE71C3625E996B7070A02 /* Pods */ = {
+		4FAAAA7146C2C1094201210B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4A18A3219612DD9882854785 /* Pods-wakeithappn.debug.xcconfig */,
-				D96C11978F0ED8A45E10C1ED /* Pods-wakeithappn.release.xcconfig */,
+				DEE8A2232C79E272A22A4B80 /* Pods-wakeithappn.debug.xcconfig */,
+				F66B0EFA6BBA897135883AB6 /* Pods-wakeithappn.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FDAD5EA0160EE7CF4E3D656E /* Frameworks */ = {
+		E146BDE69352A77396099DFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				532F6FC0D64020F1F4975AB9 /* Pods_wakeithappn.framework */,
+				C0E59625F81F5AEEC04A90D0 /* Pods_wakeithappn.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,8 +82,8 @@
 			children = (
 				FF88BFB620C97691005E783D /* wakeithappn */,
 				FF88BFB520C97691005E783D /* Products */,
-				061DE71C3625E996B7070A02 /* Pods */,
-				FDAD5EA0160EE7CF4E3D656E /* Frameworks */,
+				4FAAAA7146C2C1094201210B /* Pods */,
+				E146BDE69352A77396099DFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,12 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF88BFC620C97691005E783D /* Build configuration list for PBXNativeTarget "wakeithappn" */;
 			buildPhases = (
-				9C453E9B470F886D41097F90 /* [CP] Check Pods Manifest.lock */,
+				DDD2E07ED8C06555AF53BAD0 /* [CP] Check Pods Manifest.lock */,
 				FF88BFB020C97691005E783D /* Sources */,
 				FF88BFB120C97691005E783D /* Frameworks */,
 				FF88BFB220C97691005E783D /* Resources */,
-				B1D5CADAF737A35C7021EBBA /* [CP] Embed Pods Frameworks */,
-				265503623D73DD6A2A45FD72 /* [CP] Copy Pods Resources */,
+				09075503832EE1B8B509F0AF /* [CP] Embed Pods Frameworks */,
+				A1BD8C5F3E315F09DE386551 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,7 +194,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		265503623D73DD6A2A45FD72 /* [CP] Copy Pods Resources */ = {
+		09075503832EE1B8B509F0AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1BD8C5F3E315F09DE386551 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,7 +234,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C453E9B470F886D41097F90 /* [CP] Check Pods Manifest.lock */ = {
+		DDD2E07ED8C06555AF53BAD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,24 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1D5CADAF737A35C7021EBBA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakeithappn/Pods-wakeithappn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -405,7 +405,7 @@
 		};
 		FF88BFC720C97691005E783D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A18A3219612DD9882854785 /* Pods-wakeithappn.debug.xcconfig */;
+			baseConfigurationReference = DEE8A2232C79E272A22A4B80 /* Pods-wakeithappn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -421,7 +421,7 @@
 		};
 		FF88BFC820C97691005E783D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D96C11978F0ED8A45E10C1ED /* Pods-wakeithappn.release.xcconfig */;
+			baseConfigurationReference = F66B0EFA6BBA897135883AB6 /* Pods-wakeithappn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
