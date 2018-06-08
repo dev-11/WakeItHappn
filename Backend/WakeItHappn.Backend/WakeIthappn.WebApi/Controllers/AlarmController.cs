@@ -13,7 +13,7 @@ namespace WakeIthappn.WebApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public JsonResult Get([FromBody]AlarmData alarmData)
+        public JsonResult Get(AlarmData alarmData)
         {
             IAlarm alarmService;
 
@@ -32,16 +32,10 @@ namespace WakeIthappn.WebApi.Controllers
                 {
                     AlarmId = Guid.NewGuid(),
                     ArrivalTime = new DateTime(2018, 6, 8, 9, 30, 0),
-                    From = new Coordinate
-                    {
-                        Latitude = 51.525246,
-                        Longitude = 0.084672
-                    },
-                    To = new Coordinate
-                    {
-                        Latitude = 51.559098,
-                        Longitude = 0.074503
-                    }
+                    FromLat = 51.525246,
+                    FromLong = 0.084672,
+                    ToLat = 51.559098,
+                    ToLong = 0.074503
                 };
             }
 

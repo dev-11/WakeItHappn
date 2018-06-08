@@ -17,8 +17,17 @@ namespace WakeItHappen.Service
         {
             var response = _routePlanner.GetTravelTime(new TravelTimeRequest
             {
-                End = alarmData.To,
-                Start = alarmData.From,
+                End = new Coordinate()
+                {
+                    Latitude = alarmData.ToLat, 
+                    Longitude = alarmData.ToLong   
+                },
+                Start = new Coordinate()
+                {
+                    Latitude = alarmData.FromLat, 
+                    Longitude = alarmData.FromLong   
+                },
+//                Start = alarmData.From,
                 Time = alarmData.ArrivalTime
             });
 

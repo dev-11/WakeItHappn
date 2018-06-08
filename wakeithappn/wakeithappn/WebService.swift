@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 
 private let _webServiceSharedInstance = WebService()
 
@@ -22,13 +22,24 @@ class WebService {
     init() {
     }
     
-    func getAlarmTime() -> Void {
+    func getAlarmTime(arrivalTime: Date, from: (Double, Double), to: (Double, Double)) -> Void {
         
-        // var params = ["alarmKey": "x"]
+        var params = ["alarmId": "702e5dd5-5395-484f-acb1-0b2436c8f8a4"]
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date / server String
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-//        Alamofire.request(apiUrl).responseJSON {
-//            response in
-//            print("response")
-//        }
+        let arrivalString = formatter.string(from: arrivalTime)
+        params["arrivalTime"] = arrivalString
+        params["fromLat"] = String(from.0)
+        params["fromLong"] = String(from.1)
+        params["toLat"] = String(to.0)
+        params["toLong"] = String(to.1)
+        
+        
+        Alamofire.request(apiUrl, parameters: params).responseJSON {
+            response in
+            print("response")
+        }
     }
 }
